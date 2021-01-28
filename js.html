@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="prism.css">
+        <script src="prism.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="https://hscompany.netlify.com/logo_(1).png" type="image/x-icon">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <nav>
+        <span class="logo"><img src="copy.png" alt=""></span>
+        <div class="content center">
+            Javascript!
+        </div>
+    </nav>
+    <div class="container">
+        <ol>
+            <li> Variables
+                <pre class="language-js"><code>var number1 = 34;   //number
+
+var str1 = "This is a string";   //string
+
+var marks = {   //object
+    Tom: 34,
+    Rick: 78,   
+    Nick: 99.9
+}   
+
+var a = True;  //Boolean
+var b = False;   //Boolean </code></pre>
+            </li> 
+
+            <li>String Methods
+                <pre class="language-js"><code>var str1 = "I am a good boy";
+
+console.log(str1.length);   //Shows the length in number
+
+console.log(str1.indexOf("good"));   //Shows the position of the value in the string
+                .lastIndexOf()   //-------> Shows the last index of the value
+
+console.log(str1.slice(0,3));   //Shows wanted value index.  PS: It will take 0,1,2
+d = str1.replace("good", "bad");   //Replaces the value
+
+var z = str1.toUpperCase();   //Converts the string in capital letters
+            .toLowerCase()    //Converts the string in lower letters 
+
+console.log(str1.trim());   //Removes all the spaces
+
+var a = "Hello";
+var b = "World";
+var d = a.concat(" ", b);   //Joins the two strings
+
+console.log(str1.substr(7, 6));   //Extracts part of the string
+/*                      |  |
+                        /   \
+                       /     \-----characters to take from that position
+                 position 
+              to start from
+*/
+</code></pre>
+            </li> 
+
+
+            <li>Array
+                <pre class="language-js"><code>var myArr = [1, 2, "Hello", 4, 5];   //array
+                     
+//Array Methods
+console.log(myArr.length);   //Shows the length in number
+myArr.pop();   //Removes the last value in the Array
+myArr.push("Harsimran");   //Adds the value in the Array at the last position
+myArr.shift();   //Removes the first value in the array
+myArr.unshift("Harsimran");   //Adds value in the array in the first position 
+myArr.toString();   //Converts all the values into strings
+myArr.sort();   //Sorts the list in alphabetical order
+myArr[0] = "Kiwi";   //Changes the value of an item in the array
+delete myArr[0];   //Deletes the value in the array
+
+//Merging
+var a = ["Lone", "Sam"];
+var b = ["Rick", "Linux"];
+var c = a.concat(b);
+
+//Slicing
+var fruits = ["Banana", "Mango", "Apple", "Orange"];
+var flist = fruits.slice(1);   //Will create a new array without a value
+</code></pre>
+            </li> 
+            <li>Operators
+                <pre class="language-js"><code>var a = 5;
+a += 2;  //Addition
+a -= 2;  //Substraction
+a *= 2;  //Multiplication
+a /= 2;  //Division
+                </code></pre>
+            </li> 
+            <li>Functions
+                <pre class="language-js"><code>function avg(a, b){
+    return (a+b)/2 ;
+}</code></pre>
+            </li> 
+            <li><b>Conditionals
+                <pre class="language-js"><code>var age = 11;
+
+if(age > 18){
+    console.log("You are not a child");
+}
+else if(age>10){
+    console.log("You are greater than 10");
+}
+else{
+    console.log("You are a child");
+}</code></pre>
+            </li> 
+            <li>Loops
+                <pre class="language-js"><code>for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+} 
+
+Let j=0;
+while(j<5) {
+    console.log("j");
+    j ++;
+} </code></pre>
+            </li> 
+            <li>Dates
+                <pre class="language-js"><code>Let myDate = new Date();
+console.log(myDate);   //Show the date
+
+//Methods
+console.log(myDate.getTime());   //Gives time in seconds
+                  .getFullYear()   //Shows current year
+                  .getDay()   //Shows the day   PS: in number, of the weekday
+                  .getMinutes()   //Shows minutes
+                  .getHours()   //Shows hours
+                </code></pre>
+            </li> 
+
+            <li>DOM Manipulation
+                <pre class="language-js"><code>document.write();  //to write in the HTML page
+
+document.getElementById("myDiv")  //Get element by its id
+document.getElementByClassName("myDiv")   //Get element by its class
+document.getElementByTagName("button")   //Get element by its tag name
+
+a = document.getElementByClassName("myDiv");
+a.style.backgroud = "yellow";  //Modify the style
+a.innerHTML  //to see the html content
+a.innerText   //to see the text content
+                </code></pre>
+            </li> 
+
+            <li>Events
+                <pre class="language-js"><code>//In HTML 
+< button>id="click" onclick="clicked()">Click me < /button>
+//In Javascript
+function clicked(){
+    console.log("All Done");
+}
+
+//Another Method
+myDiv.addEventListener('click', function(){
+    console.log("Clicked on myDiv");
+})   //myDiv is the id of the tag
+
+.addEventListener('click', function(){}
+                 ('mouseover' ...   //taking mouse in that item
+                 ('mouseout' ...   //Taking mouse out of that item
+                 ('mouseup' ...   //Clicked on that item and left mouse
+                 ('mousedown' ...   //Clicked on that item and holded
+                </code></pre>
+            </li> 
+
+            <li>Timeout & Interval
+                <pre class="language-js"><code>function logKaro(){
+    console.log("All done!");
+}
+a = setTimeout(logKaro, 2000);   //It will run the function after 2000 milliseconds
+b = setInterval(logKaro, 2000);   //It will continue running the function after every 2000 milliseconds
+clearInterval();   //To stop the interval             </code></pre>
+            </li> 
+
+            <li>Local Storage
+                <pre class="language-js"><code>localStorage;
+localStorage.clear();
+localStorage.setItem('name', 'Tom');
+localStorage.getItem('name');
+                </code></pre>
+            </li>
+           
+        </ol>
+    </div>
+</body>
+
+</html>
