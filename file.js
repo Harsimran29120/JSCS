@@ -10,7 +10,7 @@
             console.log(a);
 
             if (a === "harsimran" && b === "2004") {
-                window.location.href = "../index.html";
+                window.location.href = "./js.html";
             } else {
                 alert("Wrong credentials!");
             }
